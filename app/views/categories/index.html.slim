@@ -1,0 +1,27 @@
+nav.navbar.navbar-fixed-top.navbar-dark.bg-inverse
+  .container
+    a.navbar-brand href="/"
+      'Fiscus Open
+    ul.nav.navbar-nav
+      li.nav-item.active
+        a.nav-link href="#" Home
+      li.nav-item
+        a.nav-link href="#about" About
+      li.nav-item
+        a.nav-link href="#contact" Contact
+  .container
+    table.table
+      thead.table-inverse
+        tr
+          th #
+          th Name
+          th Description
+        tbody
+          - @categories.each_with_index do |category, index|
+            tr
+              td scope='row'
+                = index + 1
+              td
+                = category.name
+              td
+                = category.description || '-'
