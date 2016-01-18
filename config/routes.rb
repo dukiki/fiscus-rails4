@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  root 'application#index'
+  # login/logout
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+
+  # Categories
   get 'categories/index'
 
   get 'categories/edit'
@@ -9,5 +16,4 @@ Rails.application.routes.draw do
 
   get 'categories/delete'
 
-  root 'application#index'
 end
