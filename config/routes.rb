@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'application#index'
+  devise_for :users
+  root to: 'demo_page#index'
   # login/logout
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
