@@ -8,4 +8,4 @@ Rails.application.config.assets.version = '1.0'
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-Rails.application.config.assets.precompile += %w( sessions.scss sessions.js )
+Rails.application.config.assets.precompile += %w( categories.scss categories.js demo_page.scss demo_page.js users/sessions.scss users/sessions.js )
